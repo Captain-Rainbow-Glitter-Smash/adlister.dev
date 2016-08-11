@@ -17,13 +17,10 @@ function pageController()
 		case '/': 
 			$main_view = '../views/home.php';
 			break;
-		
 
-
-
-
-
-
+		case '/login-successful':
+			$main_view = '../views/users/account.php';
+			break;
 		case '/inventory': 
 			$main_view = '../views/ads/index.php';
 			break;
@@ -32,6 +29,7 @@ function pageController()
 			break;
 		case '/signup': 
 			$main_view = '../views/users/signup.php';
+			//create user function
 			break;
 		case '/login': 
 			$main_view = '../views/users/login.php';
