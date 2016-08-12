@@ -15,15 +15,15 @@
 						<div class="col-md-8">
 							<div class="form-group">
 								<label for="name" class="make_white">Name</label>
-								<input type="text" id="subject" name="name" class="form-control" placeholder="Name" required="required" autofocus>
+								<input type="text" id="subject" name="name" class="form-control" required="required" autofocus>
 							</div>
 							<div class="form-group">
 								<label for="price" class="make_white">Price</label>
-								<input type="text" id="subject" name="price" class="form-control" placeholder="Price" required="required" autofocus>
+								<input type="text" id="subject" name="price" class="form-control" required="required" autofocus>
 							</div>
 							<div class="form-group">
 								<label for="keywords" class="make_white">Keywords, seperated by a ( , )</label>
-								<input type="text" id="keywords" name="keywords" class="form-control" placeholder="Keywords" required="required" autofocus>
+								<input type="text" id="keywords" name="keywords" class="form-control" required="required" autofocus>
 							</div>
 							<div class="form-group">
 								<label for="name" class="make_white">Attach</label>
@@ -33,7 +33,7 @@
 					</div>
 							<div class="form-group">
 								<label for="subject" class="make_white">Description</label>
-								<textarea type="text" id="description" name="description" class="form-control" placeholder="Enter item description here" required="required" autofocus rows="10"></textarea>
+								<textarea type="text" id="description" name="description" class="form-control" required="required" autofocus rows="10"></textarea>
 							</div>
 							<div class="col-md-12">
 								<div class="control-group">

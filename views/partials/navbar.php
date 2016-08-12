@@ -26,6 +26,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="/login-successful">Profile</a></li>
 						<li><a href="/create_ad">Create Ad</a></li>
+						<li><a href="/edit_ad">Edit Ad</a></li>
 						<li><a href="/pleaseloveme!">Missed Connections</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="/logout">Logout</a></li>
