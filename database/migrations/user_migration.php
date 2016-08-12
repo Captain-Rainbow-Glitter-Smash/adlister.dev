@@ -2,7 +2,9 @@
 
 $_ENV = require __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
-$dbc->exec('DROP DATABASE IF EXISTS adlister_db');
+
+$dbc->exec('DROP TABLE IF EXISTS users');
+
 
 $query = 'CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,

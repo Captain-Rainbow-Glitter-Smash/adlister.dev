@@ -15,7 +15,7 @@
                 <?php foreach ($items as $item): ?> 
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <div class="thumbnail opacity">
-                        <img src="/css/img/uploads/<?=$item->img_url?>" alt="Shield">
+                        <img src=<?="/css/img/uploads/" . $item->img_url?> alt="Shield">
                         <div class="caption">
                             <h4 class="pull-right make_white"><?=$item->price?></h4>
                             <h4><a href="/item" class="make_white"><?=$item->name?></a>
