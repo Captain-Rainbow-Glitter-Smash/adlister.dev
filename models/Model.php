@@ -231,20 +231,21 @@ class Model {
         $stmt->execute();
 
         //Store the resultset in a variable named $result
+        
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // The following code will set the attributes on the calling object based on the result variable's contents
-
-        $instance = null;
-
-        if ( $results )
-        {
-
-            $instance = new static;
-            $instance->attributes = $results;
+        $instanceArray = [];
+        foreach ($results as $result) {
+            $instance = null;
+            if ( $results )
+            {
+                $instance = new static;
+                $instance->attributes = $result;
+            }
+            array_push($instanceArray, $instance);
         }
-
-        return $instance;
+        return $instanceArray;
     }
 
 }
