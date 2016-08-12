@@ -22,6 +22,9 @@ function pageController()
 			break;
 
 		case '/login-successful':
+			if ($_POST) {
+				$imageName = saveUploadedImage("documents"); 
+			}
 			$main_view = '../views/users/account.php';
 			break;
 		case '/inventory': 
@@ -56,6 +59,31 @@ function pageController()
 			break;
 
 	}
+
+
+	$user = new User();
+
+	$user->name = Input::get('name');
+	$user->email = Input::get('email');
+	$user->username = Input::get('username');
+	$user->password = Input::get('password');
+
+	$user->save();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	$data['main_view'] = $main_view;
 

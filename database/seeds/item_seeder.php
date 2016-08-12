@@ -1,7 +1,7 @@
 <?php 
 $_ENV = require __DIR__ . '/../../.env.php';
 require("../db_connect.php");
-require_once __DIR__ . '/../../models/items.php';
+require_once __DIR__ . '/../../models/Items.php';
 echo $dbc->getAttribute(PDO::ATTR_CONNECTION_STATUS) . "\n";
 $list = "TRUNCATE items";
 $dbc->exec($list);
