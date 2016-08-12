@@ -1,6 +1,6 @@
 <?php
 
-$_ENV = include __DIR__ . '/../../env.php';
+$_ENV = require __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
 CREATE DATABASE the_league_db;
 
