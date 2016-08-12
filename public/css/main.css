@@ -329,3 +329,12 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 .make_white {
     color: white;
 }
+
+#dreamy {
+	background-image: url(img/pink-glitter-background.gif);
+	background-repeat: repeat;
+    margin:0 auto;
+    text-align: center;
+	height: 300px;
+/*	width: 40px;
+*/}
