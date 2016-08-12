@@ -1,6 +1,6 @@
 <?php
 
-$_ENV = include __DIR__ . '/../env.php';
+$_ENV = include __DIR__ . '/../.env.php';
 
 class Model {
 
@@ -53,11 +53,11 @@ class Model {
     protected static function dbConnect()
     {
 
-        if ( ! self::$dbc )
+        if (!self::$dbc )
         {
 
             //Connect to database
-            require_once __DIR__ . '/../database/db_connect.php';
+            require __DIR__ . '/../database/db_connect.php';
 
             self::$dbc = $dbc;
         }

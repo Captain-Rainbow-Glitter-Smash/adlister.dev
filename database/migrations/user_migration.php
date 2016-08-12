@@ -2,8 +2,12 @@
 
 $_ENV = include __DIR__ . '/../../env.php';
 require_once '../db_connect.php';
+CREATE DATABASE the_league_db;
 
-$dbc->exec('DROP TABLE IF EXISTS users');
+
+
+$dbc->exec('DROP DATABASE IF EXISTS adlister_db');
+USE adlister_db;
 
 $query = 'CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
