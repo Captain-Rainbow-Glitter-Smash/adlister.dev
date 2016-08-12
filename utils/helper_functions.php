@@ -50,6 +50,12 @@ function saveUploadedImage($input_name)
 	    }
 	}
 }
+//show items function
+function showInventory() {
+	$items = Items::all();
+	return $items;
+}
+
 
 //input functions
 

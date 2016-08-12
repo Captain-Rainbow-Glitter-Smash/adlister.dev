@@ -13,7 +13,7 @@ $items->description = 'Thor\'s hammer makes thunder I guess?';
 $items->keywords = 'weapons';
 $items->date_added = '2016-08-11';
 $items->username = "finn_the_human";
-$items->img_url = '/css/img/hammer.png';
+$items->img_url = 'hammer.png';
 $items->featured = 1;
 $items->save();
 
@@ -24,7 +24,7 @@ $items->description = 'Weird horn things. Looks kinda cool.';
 $items->keywords = 'armor';
 $items->date_added = '2016-08-11';
 $items->username = "ice_king";
-$items->img_url = '/css/img/lokis_helmet.png';
+$items->img_url = 'lokis_helmet.png';
 $items->featured = 1;
 $items->save();
 
@@ -35,7 +35,7 @@ $items->description = 'Get your rage on in style.';
 $items->keywords = 'armor';
 $items->date_added = '2016-08-12';
 $items->username = "jake_the_dog";
-$items->img_url = '/css/img/hulk_pants.png';
+$items->img_url = 'hulk_pants.png';
 $items->featured = 0;
 $items->save();
 
@@ -46,7 +46,7 @@ $items->description = 'Bows are really trendy now. You could be the next Katniss
 $items->keywords = 'weapon';
 $items->date_added = '2016-08-14';
 $items->username = "ice_king";
-$items->img_url = '/css/img/hawkeye_bow.png';
+$items->img_url = 'hawkeye_bow.png';
 $items->featured = 0;
 $items->save();
 
@@ -57,6 +57,6 @@ $items->description = 'Could possibly be more dangerous than her guns.';
 $items->keywords = 'armor';
 $items->date_added = '2016-08-15';
 $items->username = "jake_the_dog";
-$items->img_url = '/css/img/blackwidow.png';
+$items->img_url = 'blackwidow.png';
 $items->featured = 0;
 $items->save();

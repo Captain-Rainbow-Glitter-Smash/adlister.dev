@@ -25,6 +25,7 @@ function pageController()
 			$main_view = '../views/users/account.php';
 			break;
 		case '/inventory': 
+			$data["items"] = showInventory();
 			$main_view = '../views/ads/index.php';
 			break;
 		case '/create_ad': 
