@@ -24,11 +24,9 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Create Ad</a></li>
-						<li><a href="#">Edit Missed Connections</a></li>
-						<li><a href="#">Your Ads</a></li>
-						<li><a href="#">Edit Ads</a></li>
+						<li><a href="/login-successful">Profile</a></li>
+						<li><a href="/create_ad">Create Ad</a></li>
+						<li><a href="/pleaseloveme!">Missed Connections</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="/logout">Logout</a></li>
 					</ul>

@@ -31,11 +31,11 @@ $items->save();
 $items = new items;
 $items->name = 'Iron Man\'s Suit';
 $items->price = 250;
-$items->description = 'Get your rage on in style.';
+$items->description = 'Is it actually made of iron or is that just his name. Iron is a bit old school. Comes with all the cool but none of the cash.';
 $items->keywords = 'armor';
 $items->date_added = '2016-08-12';
 $items->username = "jake_the_dog";
-$items->img_url = 'hulk_pants.png';
+$items->img_url = 'iron_man.png';
 $items->featured = 0;
 $items->save();
 
