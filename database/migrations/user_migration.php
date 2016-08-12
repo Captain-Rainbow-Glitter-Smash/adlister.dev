@@ -2,7 +2,7 @@
 
 $_ENV = require __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
-CREATE DATABASE the_league_db;
+CREATE DATABASE adlister_db;
 
 
 
