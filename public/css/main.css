@@ -12,10 +12,10 @@ html {
 }
 
 /*Create Ad*/
-div.well.well-sm {
-	height: 500px;
-	width: 800px;
-}
+/*div.well.well-sm {
+	height: 100%;
+	width: 100%;
+}*/
 button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	margin-top: 15px;
 }
@@ -325,6 +325,8 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    height: 100%;
+	width: 100%;
 }
 .make_white {
     color: white;
