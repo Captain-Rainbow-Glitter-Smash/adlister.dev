@@ -3,8 +3,6 @@
 $_ENV = require __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
 $dbc->exec('DROP DATABASE IF EXISTS adlister_db');
-$dbc->exec('CREATE DATABASE adlister_db');
-USE adlister_db;
 
 $query = 'CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
