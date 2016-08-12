@@ -189,7 +189,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 18px;
-	color: #404040;
+	color: #FFF;
 }
 
 .card.people .card-info .desc {
@@ -198,7 +198,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	overflow: hidden;
 	font-size: 12px;
 	line-height: 16px;
-	color: #737373;
+	color: #FFF;
 	text-overflow: ellipsis;
 }
 
@@ -225,7 +225,6 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 }
 
 .card.hovercard .cardheader {
-	background: url("http://lorempixel.com/850/280/nature/4/");
 	background-size: cover;
 	height: 135px;
 }
@@ -255,7 +254,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	margin-bottom: 4px;
 	font-size: 24px;
 	line-height: 1;
-	color: #262626;
+	color: #FFF;
 	vertical-align: middle;
 }
 
@@ -263,7 +262,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	overflow: hidden;
 	font-size: 12px;
 	line-height: 20px;
-	color: #737373;
+	color: #FFF;
 	text-overflow: ellipsis;
 }
 

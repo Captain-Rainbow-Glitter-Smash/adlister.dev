@@ -39,21 +39,17 @@ if($username == null && $password == null){
 }
 
 
+
+//if shit goes south, make this a function def
 if(Auth::check()){
 	$request = '/login-successful';
 
 }
 
 if (Auth::attempt($username, $password)){
-
 	$request = '/login-successful';	
 
 } else {
+
 	$request = '/login';
 } 
-var_dump($_SESSION);
-
-
-if (Auth::logout()){
-	$request = '/login';
-}

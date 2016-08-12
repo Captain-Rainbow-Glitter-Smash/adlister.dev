@@ -18,7 +18,6 @@
 				<li><a href="/create_ad">Create Ad</a></li>
 				<li><a href="/signup">Sign Up</a></li>
 				<li><a href="/login">Login</a></li>
-				<li><a href="#">Logout</a></li>
 				<li><a href="/pleaseloveme!">Missed Connections</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -31,7 +30,7 @@
 						<li><a href="#">Your Ads</a></li>
 						<li><a href="#">Edit Ads</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Logout</a></li>
+						<li><a href="/logout">Logout</a></li>
 					</ul>
 				</li>
 			</ul>

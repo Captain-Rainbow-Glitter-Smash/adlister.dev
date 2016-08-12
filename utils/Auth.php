@@ -19,12 +19,12 @@ class Auth
 
 		// gets instance of user model by searching with username or email($username)
 		$user = User::findByUsernameOrEmail($username);
-	
+
 		// makes sure the instance returned is not empty
 		if ($user == null)
 		{
 
-			$_SESSION['ERROR_MESSAGE'] = "Username is null";
+			$_SESSION['ERROR_MESSAGE'] = "Login credentials are incorrect!";
 			return false;
 		}
 
@@ -37,10 +37,11 @@ class Auth
 			$_SESSION['LOGGED_IN_ID'] = $user->id;
 
 			return true;
-		}
+		} else {
 
-		// $_SESSION['ERROR_MESSAGE'] = 'Login information was incorrect';
-		// return false;
+			$_SESSION['ERROR_MESSAGE'] = 'Login information was incorrect';
+			return false;
+		}
 	}
 
 	// checks session to see if user is logged in

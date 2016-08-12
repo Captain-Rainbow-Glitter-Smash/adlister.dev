@@ -32,8 +32,9 @@ class User extends Model {
         $stmt->execute();
 
         //Store the resultset in a variable named $result
-        $results = $stmt->fetchAll();
+        $results = $stmt->fetch();
 
+       
         // The following code will set the attributes on the calling object based on the result variable's contents
 
 
