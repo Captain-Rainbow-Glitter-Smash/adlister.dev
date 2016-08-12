@@ -31,14 +31,13 @@ class Items extends Model {
     public static function findByKeyword($keyword) {
         self::dbConnect();
 
-        $query = 'SELECT * FROM ' .self::$table . ' WHERE keyword = :keyword';
+        $query = 'SELECT * FROM ' .self::$table . ' WHERE keywords = :keywords';
         $stmt = self::$dbc->prepare($query);
-        $stmt->bindValue(':keyword', $keyword PDO::PARAM_STR);
+        $stmt->bindValue(':keywords', $keyword, PDO::PARAM_STR);
         $stmt->execute();
 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $instance = null;
-    }
 
         $instances = [];
         foreach ($results as $result) {
@@ -48,6 +47,7 @@ class Items extends Model {
 
         }
         return $instances;
+        
     }
 
 }
