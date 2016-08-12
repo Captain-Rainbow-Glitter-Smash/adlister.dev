@@ -12,11 +12,11 @@
                 </div>
                 <div class="info">
                     <div class="title">
-                        <p>The Collector</p>
+                        <p><?= $user->name ?></p>
                     </div>
-                    <div class="desc">Passionate Antiquer</div>
-                    <div class="desc">Curious Explorer</div>
-                    <div class="desc">Superhero Geek</div>
+                    <div class="desc"><?= $user->attrOne ?></div>
+                    <div class="desc"><?= $user->attrTwo ?></div>
+                    <div class="desc"><?= $user->attrThree ?></div>
                 </div>
             </div>
 
