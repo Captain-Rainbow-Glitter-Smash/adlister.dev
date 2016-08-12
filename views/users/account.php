@@ -5,18 +5,18 @@
 
             <div class="card hovercard">
                 <div class="cardheader">
-
+                    <img alt="" src="../../css/img/bannerImg/collector-background.jpg">
                 </div>
                 <div class="avatar">
-                    <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                    <img alt="" src="../../css/img/profileImg/the-collector.jpg">
                 </div>
                 <div class="info">
                     <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">Script Eden</a>
+                        <p>The Collector</p>
                     </div>
-                    <div class="desc">Passionate designer</div>
-                    <div class="desc">Curious developer</div>
-                    <div class="desc">Tech geek</div>
+                    <div class="desc">Passionate Antiquer</div>
+                    <div class="desc">Curious Explorer</div>
+                    <div class="desc">Superhero Geek</div>
                 </div>
             </div>
 
