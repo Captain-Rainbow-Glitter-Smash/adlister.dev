@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="well well-sm">
+			<div class="well well-sm opacity">
 				<form id="FormEnvioCorreo">
 					<div class="row">
 						<div class="col-md-8">
@@ -20,6 +20,10 @@
 							<div class="form-group">
 								<label for="subject">Price</label>
 								<input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required="required" autofocus>
+							</div>
+							<div class="form-group">
+								<label for="keywords" class="make_white">Keywords, seperated by a ( , )</label>
+								<input type="text" id="keywords" name="keywords" class="form-control" required="required" autofocus>
 							</div>
 							<div class="form-group">
 								<label for="name">Attach</label>
