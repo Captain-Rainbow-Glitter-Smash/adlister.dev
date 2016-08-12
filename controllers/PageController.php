@@ -54,37 +54,16 @@ function pageController()
 		case '/pleaseloveme!': 
 			$main_view = '../views/ads/missed_connections.php';
 			break;
+		case '/edit_ad': 
+			$main_view = '../views/ads/edit.php';
+			break;
 		default:    // displays 404 if route not specified above
 			$main_view = '../views/404.php';
 			break;
 
 	}
 
-	if (Input::has('name')) {
-		$user = new User();
-
-		$user->name = Input::get('name');
-		$user->email = Input::get('email');
-		$user->username = Input::get('username');
-		$user->password = Input::get('password');
-
-		$user->save();	
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 	$data['main_view'] = $main_view;
 
