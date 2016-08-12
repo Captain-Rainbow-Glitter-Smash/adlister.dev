@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-md-8">
 			<div class="well well-sm opacity" id="ad_box">
-				<form id="FormEnvioCorreo">
+				<form id="FormEnvioCorreo" enctype="multipart/form-data" method="post">
 					<div class="row">
 						<div class="col-md-8">
 							<div class="form-group">
@@ -27,7 +27,7 @@
 							</div>
 							<div class="form-group">
 								<label for="name" class="make_white">Attach</label>
-								<input type="file" id="fileselect" name="documents" class="form-control"  style="  width: 310px;">
+								<input type="file" id="fileselect" name="documents" class="form-control"  style="  width: 310px;" >
 							</div>
 						</div>
 					</div>

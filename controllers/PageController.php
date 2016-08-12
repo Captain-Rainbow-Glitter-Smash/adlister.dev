@@ -4,7 +4,6 @@ require_once __DIR__ . '/../utils/helper_functions.php';
 
 function pageController()
 {
-
 	// defines array to be returned and extracted for view
 	$data = [];
 
@@ -25,6 +24,9 @@ function pageController()
 			$main_view = '../views/ads/index.php';
 			break;
 		case '/create_ad': 
+			if ($_POST) {
+				$imageName = saveUploadedImage("documents"); 
+			}
 			$main_view = '../views/ads/create.php';
 			break;
 		case '/signup': 

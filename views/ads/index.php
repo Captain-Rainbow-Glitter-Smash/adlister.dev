@@ -8,7 +8,6 @@
             <div class="list-group">
                 <a href="#" class="list-group-item">Weapons</a>
                 <a href="#" class="list-group-item">Armor</a>
-                <a href="#" class="list-group-item">Missed Connections</a>
             </div>
         </div>
         <div class="col-md-9">
