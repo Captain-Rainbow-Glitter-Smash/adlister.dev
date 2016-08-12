@@ -4,6 +4,7 @@
 
 require_once 'Auth.php';
 require_once '../controllers/PageController.php';
+require_once '../models/Items.php';
 // takes image from form submission and moves it into the uploads directory
 function saveUploadedImage($input_name)
 {
