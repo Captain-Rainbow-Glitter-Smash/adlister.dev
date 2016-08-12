@@ -1,6 +1,10 @@
 <?php
-
+$_ENV = require __DIR__ . '/../../.env.php';
+require("../db_connect.php");
 require_once __DIR__ . '/../../models/User.php';
+echo $dbc->getAttribute(PDO::ATTR_CONNECTION_STATUS) . "\n";
+$list = "TRUNCATE user";
+$dbc->exec($list);
 
 $user = new User;
 $user->name = 'Finn Mertens';
