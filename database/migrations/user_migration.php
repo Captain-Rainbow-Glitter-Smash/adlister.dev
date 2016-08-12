@@ -2,10 +2,6 @@
 
 $_ENV = require __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
-CREATE DATABASE adlister_db;
-
-
-
 $dbc->exec('DROP DATABASE IF EXISTS adlister_db');
 USE adlister_db;
 
