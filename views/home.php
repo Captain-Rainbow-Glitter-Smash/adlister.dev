@@ -3,13 +3,7 @@
          <h1 id="crgs_title">Welcome to Captain Rainbow Glitter Smash!</h1>
          <h4 id="subtitle">The number 4 marketplace for all your authentic-ish hero items.</h3>
      </div>
-     <div class="row">
-         <div class="col-md-3">
-             <div class="list-group">
-                 <a href="#" class="list-group-item">Weapons</a>
-                 <a href="#" class="list-group-item">Armor</a>
-             </div>
-         </div>
+    <div class="row">
          <div class="col-md-9">
              <div class="row carousel-holder">
                  <div class="col-md-12">

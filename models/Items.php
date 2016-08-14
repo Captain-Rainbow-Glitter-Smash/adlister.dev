@@ -11,7 +11,6 @@ class Items extends Model {
     	self::dbConnect();
 
     	$query = 'SELECT * FROM ' . self::$table . ' WHERE username = :username';
-
     	$stmt = self::$dbc->prepare($query);
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->execute();
@@ -31,6 +30,7 @@ class Items extends Model {
     public static function findByKeyword($keyword) {
         self::dbConnect();
 
+        // $filter = $_POST['search_type'];
         $query = 'SELECT * FROM ' .self::$table . ' WHERE keywords = :keywords';
         $stmt = self::$dbc->prepare($query);
         $stmt->bindValue(':keywords', $keyword, PDO::PARAM_STR);

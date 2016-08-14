@@ -11,13 +11,9 @@ html {
 	height: 100%
 }
 
-/*Create Ad*/
-/*div.well.well-sm {
-	height: 100%;
-	width: 100%;
-}*/
+/*Create Ad & Edit Ad*/
 button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 /*/Create Ad/*/
 .slide-image {
@@ -28,7 +24,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 }
 
 #subtitle {
-	text-align: center;
+	text-align: left;
 }
 
 .card {
@@ -327,6 +323,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     box-sizing: border-box;
     height: 100%;
 	width: 100%;
+	overflow: scroll;
 }
 .make_white {
     color: white;
@@ -340,3 +337,19 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	height: 300px;
 /*	width: 40px;
 */}
+#filter_list {
+	padding-top: 20px;
+    margin: 10px 0 20px 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    width: 50%;
+    padding: 10px;
+}
+input#filter {
+	margin-top: 10px;
+	color: black;
+}
+img.crop {
+	width: auto;
+	height: 200px;
+	overflow: hidden;
+}
