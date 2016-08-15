@@ -367,10 +367,7 @@ img.crop {
 	height: 200px !important;
 	overflow: hidden;
 }
-.slide-image {
- width:340px;
-   height:160px;
-}
-li li-active {
-
+img.slide-image {
+ width:400px !important;
+   height:300px !important;
 }
