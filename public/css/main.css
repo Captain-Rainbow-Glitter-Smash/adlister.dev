@@ -20,10 +20,14 @@ div#createAs.well.well-sm.opacity {
 }
 /*/Create Ad/*/
 .slide-image {
-	height: 30%;
-	width: 30%;
+	height: 300px;
+	width: 100%;
 	margin-bottom: 20px;
-	margin-left: 30%;
+	margin-left: 50%;
+}
+.item {
+	width: 100%;
+	height: 50%;
 }
 
 #subtitle {
@@ -327,6 +331,9 @@ div#createAs.well.well-sm.opacity {
     height: 350px;
 	width: 100%;
 	overflow: scroll;
+	margin-top: 10%;
+	margin-right: 50%;
+	margin-left: 50%;
 }
 .make_white {
     color: white;
@@ -362,8 +369,7 @@ img.crop {
 	height: 200px;
 	overflow: hidden;
 }
-#carousel-example-generic {
-	margin-bottom: 25px;
-	margin-top: 10px;
-	padding: 10px;
+img.slide-image {
+	width:340px;
+    height:160px;
 }
