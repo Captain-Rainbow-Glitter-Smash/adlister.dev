@@ -8,7 +8,7 @@ require_once '../models/Items.php';
 // takes image from form submission and moves it into the uploads directory
 function saveUploadedImage($input_name)
 {
-	$target_dir = "css/img/uploads/";
+	$target_dir = "img/uploads/";
 	$filename = basename($_FILES[$input_name]["name"]);
 	$target_file = $target_dir . $filename;
 	$uploadOk = 1;
@@ -60,44 +60,63 @@ function showInventory() {
 }
 
 
-function showProfile() {
-	$user = User::all();
-	return $user;
-}
-
-
 //Featured Item List
 
 function featuredItems() {
-	if ($featured = 1) {
-	$items = Items::Features($featured);		
-	}
+	$items = Items::Features(); 
 	return $items;
 }
 
 
-//input functions
+// //input functions
 
- $username = Input::has('email_user') ? Input::get('email_user') : null;
- $password = Input::has('password') ? Input::get('password') : null;
- $name = Input::has('name') ? Input::get('name') : null;
- $email = Input::has('email') ? Input::get('email') : null;
+//  $username = Input::has('email_user') ? Input::get('email_user') : null;
+//  $password = Input::has('password') ? Input::get('password') : null;
+//  $name = Input::has('name') ? Input::get('name') : null;
+//  $email = Input::has('email') ? Input::get('email') : null;
 
- //first time page load
-if($username == null && $password == null && $name == null && $email == null){
-	return null;
+//  //first time page load
+// if($username == null && $password == null && $name == null && $email == null){
+// 	return null;
+// }
+
+
+
+
+
+
+function createUser (){
+	if (Input::has('name')) {
+			$user = new User();
+
+
+			$user->name = Input::get('name');
+			$user->email = Input::get('email');
+			$user->username = Input::get('username');
+			$user->password = Input::get('password');
+			$user->profileImgSrc = 'default-profile.png';
+			$user->bannerImgSrc = 'default-background.jpg';
+			$user->save();	
+	}
 }
 
-//if shit goes south, make this a function def
-if(Auth::check()){
-	$request = '/login-successful';
 
+function loginController(){
+	if(Auth::check()){
+		$request = '/account';
+		header("Location: $request");
+		exit();
+	}
+
+	$username = Input::has('email_user') ? Input::get('email_user') : null;
+ 	$password = Input::has('password') ? Input::get('password') : null;
+
+	if (Auth::attempt($username, $password)){
+		$request = '/account';	
+		header("Location: $request");
+		exit();
+	} 
 }
 
-if (Auth::attempt($username, $password)){
-	$request = '/login-successful';	
 
-} else {
 
-	$request = '/login';
-} 

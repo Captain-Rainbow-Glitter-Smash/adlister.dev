@@ -13,6 +13,9 @@ $user->username = "thecollector";
 $user->password = $_ENV['USER_PASS'];
 $user->profileImgSrc = 'the-collector.jpg';
 $user->bannerImgSrc = 'collector-background.jpg';
+$user->attrOne = "Passionate Antiquer";
+$user->attrTwo = "Curious Explorer";
+$user->attrThree = "Superhero Fan";
 $user->save();
 
 $user = new User;

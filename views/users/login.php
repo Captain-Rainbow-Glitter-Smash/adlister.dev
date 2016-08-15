@@ -1,4 +1,4 @@
-<div class="container">
+ <div class="container">
 
 	<section>
 
@@ -20,7 +20,7 @@
             <?php endif; ?>
 
 			<div class="col-md-6 col-md-offset-3" id="login">
-				<form method="POST" action="" data-validation data-required-message="This field is required">
+				<form method="POST" action="/login" data-validation data-required-message="This field is required">
 
 					<div class="form-group">
 					    <input type="text" class="form-control" id="email_user" name="email_user" placeholder="Email or Username" data-required>
