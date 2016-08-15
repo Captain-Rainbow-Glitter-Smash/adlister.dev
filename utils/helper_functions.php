@@ -94,8 +94,8 @@ function createUser (){
 			$user->email = Input::get('email');
 			$user->username = Input::get('username');
 			$user->password = Input::get('password');
-			$user->profileImgSrc = '../img/default-profile.png';
-			$user->bannerImgSrc = '../img/default-profile.png';
+			$user->profileImgSrc = 'default-profile.png';
+			$user->bannerImgSrc = 'default-background.jpg';
 			$user->save();	
 	}
 }
