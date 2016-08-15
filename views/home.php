@@ -33,9 +33,7 @@
                      </div>
                  </div>
              </div>
-<<<<<<< HEAD
-             <?php foreach ($items as $item): ?>
-                
+             <?php foreach ($items as $item): ?>             
              <a href="/item"><div class="row">
                  <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail opacity">
@@ -51,28 +49,8 @@
              <?php endforeach ?>
              </div>
          </div>
-=======
         </div>
     </div>
-        <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                <?php foreach ($items as $item): ?> 
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail opacity">
-                        <img class="crop" src=<?="/css/img/uploads/" . $item->img_url?>>
-                        <div class="caption">
-                            <h4 class="pull-right make_white"><?='$'.$item->price?></h4>
-                            <h4><a href="/item" class="make_white"><?=$item->name?></a>
-                            </h4>
-                            <p class="make_white"><?=$item->description?></p>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach ?>
-            </div>
-        </div>
->>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e
     </div>
 </div>
 

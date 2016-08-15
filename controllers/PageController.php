@@ -29,20 +29,16 @@ function pageController()
 		case '/create_ad': 
 			if ($_POST) {
 				$imageName = saveUploadedImage("documents");
-<<<<<<< HEAD
-			}
-=======
 		        $item = new Items();
-		        $item->name = Input::get('name', ':name');
-		        $item->price = Input::get('price', ':price');
-		        $item->description = Input::get('description', ':description');
-		        $item->keywords = Input::get('keywords', ':keywords');
+		        $item->name = Input::get('name');
+		        $item->price = Input::get('price');
+		        $item->description = Input::get('description');
+		        $item->keywords = Input::get('keywords');
 		        $item->username = $_SESSION["IS_LOGGED_IN"];
-		        $item->img_url = Input::get('documents', ':documents');
+		        $item->img_url = $imageName ? $imageName : '';
 		        $item->featured = 0;
 		        $item->save();
 		   	}
->>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e
 			$main_view = '../views/ads/create.php';
 			break;
 		case '/signup': 
@@ -75,9 +71,5 @@ function pageController()
 	$data['main_view'] = $main_view;
 	return $data;
 }
-<<<<<<< HEAD
 extract(pageController());
-var_dump($_POST);
-=======
-extract(pageController());
->>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e
+

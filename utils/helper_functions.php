@@ -9,7 +9,8 @@ require_once '../models/Items.php';
 function saveUploadedImage($input_name)
 {
 	$target_dir = "css/img/uploads/";
-	$target_file = $target_dir . basename($_FILES[$input_name]["name"]);
+	$filename = basename($_FILES[$input_name]["name"]);
+	$target_file = $target_dir . $filename;
 	$uploadOk = 1;
 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	// Check if image file is an actual image or fake image
@@ -50,6 +51,7 @@ function saveUploadedImage($input_name)
 	        echo "Sorry, there was an error uploading your file.";
 	    }
 	}
+	return $filename;
 }
 //show items function
 function showInventory() {
@@ -100,6 +102,10 @@ function featuredItems() {
 // //if shit goes south, make this a function def
 // if(Auth::check()){
 // 	$request = '/login-successful';
+// //if shit goes south, make this a function def
+// if(Auth::check()){
+// 	$request = '/login-successful';
+
 
 // }
 
