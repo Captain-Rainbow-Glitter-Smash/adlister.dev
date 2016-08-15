@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../utils/helper_functions.php';
 
 
 function pageController()
@@ -9,7 +9,6 @@ function pageController()
 
 	// finds position for ? in url so we can look at the url minus the get variables
 	$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-	require_once __DIR__ . '/../utils/helper_functions.php';
 	//if shit goes south, visit helper_functions.php
 
 
@@ -21,10 +20,8 @@ function pageController()
 			$main_view = '../views/home.php';
 			break;
 
-		case '/login-successful':
-			if ($_POST) {
-				$imageName = saveUploadedImage("documents"); 
-			}
+		case '/account':
+			$data['user'] = showProfile();
 			$main_view = '../views/users/account.php';
 			break;
 		case '/inventory': 

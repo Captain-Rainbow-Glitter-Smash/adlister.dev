@@ -7,10 +7,12 @@ $list = "TRUNCATE users";
 $dbc->exec($list);
 
 $user = new User;
-$user->name = 'Finn Mertens';
-$user->email = 'finn@fansofbilly.com';
-$user->username = "finn_the_human";
+$user->name = 'The Collector';
+$user->email = 'thecollector@nowhere.com';
+$user->username = "thecollector";
 $user->password = $_ENV['USER_PASS'];
+$user->profileImgSrc = 'the-collector.jpg';
+$user->bannerImgSrc = 'collector-background.jpg';
 $user->save();
 
 $user = new User;

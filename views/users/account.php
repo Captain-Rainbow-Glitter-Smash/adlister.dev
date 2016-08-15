@@ -2,13 +2,12 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-sm-6">
-
             <div class="card hovercard">
                 <div class="cardheader">
-                    <img alt="" src="../../css/img/bannerImg/collector-background.jpg">
+                    <img alt="" src="/css/img/uploads/<?= $user->bannerImgSrc ?>">
                 </div>
                 <div class="avatar">
-                    <img alt="" src="../../css/img/profileImg/the-collector.jpg">
+                    <img alt="" src="/css/img/uploads/<?= $user->profileImgSrc ?>">
                 </div>
                 <div class="info">
                     <div class="title">
@@ -19,7 +18,6 @@
                     <div class="desc"><?= $user->attrThree ?></div>
                 </div>
             </div>
-
         </div>
 
     </div>

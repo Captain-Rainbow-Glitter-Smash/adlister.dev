@@ -73,8 +73,9 @@ class Auth
 
 			return User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
 		}
-
+		var_dump($_SESSION);
 		return null;
+		var_dump($_SESSION);
 	}
 
 	// clears session variables(logs out user)
