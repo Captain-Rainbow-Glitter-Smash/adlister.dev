@@ -24,12 +24,6 @@
                                  <a href="/inventory"><img class="slide-image" src="img/uploads/lokis_helmet.png" alt="loki's helmet"></a>
                              </div>
                          </div>
-                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                             <span class="glyphicon glyphicon-chevron-left"></span>
-                         </a>
-                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                             <span class="glyphicon glyphicon-chevron-right"></span>
-                         </a>
                      </div>
                  </div>
              </div>
@@ -37,9 +31,9 @@
              <a href="/item"><div class="row">
                  <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail opacity">
-                         <img src=<?="img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
+                         <img class="crop" src=<?="img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
                          <div class="caption">
-                             <h4 class="pull-right make_white"><?=$item->price?></h4>
+                             <h4 class="pull-right make_white"><?='$'.$item->price?></h4>
                              <h4><a href="/item?name=<?=$item->name?>" . <?=$item->name?> class="make_white"><?=$item->name?></a>
                              </h4>
                              <p class="make_white"><?=$item->description?></p>
@@ -53,4 +47,3 @@
     </div>
     </div>
 </div>
-
