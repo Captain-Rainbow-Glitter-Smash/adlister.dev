@@ -1,4 +1,4 @@
-<div class="container center-er">
+<div class="container">
 	<div class="row">
 		<div class="col-sm-12 col-lg-12">
 			<h1 class="h1">Create an Ad</h1>
@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="well well-sm opacity" id="ad_box">
+			<div class="well well-sm opacity">
 				<form id="FormEnvioCorreo" enctype="multipart/form-data" method="post">
 					<div class="row">
 						<div class="col-md-8">
@@ -38,7 +38,7 @@
 							<div class="col-md-12">
 								<div class="control-group">
 									<label class="control-label" for="button1id"></label>
-									<div class="controls center-er">
+									<div class="controls">
 										<button id="button1id" name="button1id" class="btn btn-success">Submit</button>
 										<button id="button2id" name="button2id" class="btn btn-danger">Clear</button>
 									</div>
