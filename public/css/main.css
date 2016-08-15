@@ -306,7 +306,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 }
 
 #ad_box {
-    margin-left:10%;
+    margin-left:25%;
     color: grey;
     height: 100%;
 }
@@ -335,6 +335,12 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     margin:0 auto;
     text-align: center;
 	height: 300px;
+<<<<<<< HEAD
+}
+#mcPage {
+	margin-left: 25%;
+}
+=======
 /*	width: 40px;
 */}
 #filter_list {
@@ -353,3 +359,4 @@ img.crop {
 	height: 200px;
 	overflow: hidden;
 }
+>>>>>>> 7e9ae3465fe488a2cbea2a138bcf076845bb738d

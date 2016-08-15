@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 require_once __DIR__ . '/Model.php';
 
@@ -50,6 +50,27 @@ class Items extends Model {
         
     }
 
-}
+    public static function Features($featured)
+        {
 
+            self::dbConnect();
+
+            $query = 'SELECT * FROM ' . self::$table . ' WHERE featured = :featured';
+
+            $stmt = self::$dbc->prepare($query);
+            $stmt->bindValue(':featured', $featured, PDO::PARAM_INT);
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $instances = [];
+            foreach ($results as $result) {
+                $instance = new static;
+                $instance->attributes = $results;
+                $instances[] = $instance;
+
+            }
+            return $instances;
+        }
+}
 ?>
