@@ -22,10 +22,14 @@ function pageController()
 			} 
 			$main_view = '../views/home.php';
 			break;
-
 		case '/account':
-			$data['user'] = showProfile();
-			$main_view = '../views/users/account.php';
+			$user = Auth::user();
+			$data['user'] = $user;
+			if (Auth::check()){
+				$main_view = '../views/users/account.php';
+			} else {
+				$main_view = '../views/users/login.php';
+			}
 			break;
 		case '/inventory': 
 			$data["items"] = showInventory();
@@ -42,6 +46,9 @@ function pageController()
 			//create user function
 			break;
 		case '/login': 
+			if ($_POST) {
+				loginController();
+			}
 			$main_view = '../views/users/login.php';
 			break;
 		case '/item': 
