@@ -36,12 +36,12 @@ function pageController()
 			if ($_POST) {
 				$imageName = saveUploadedImage("documents");
 		        $item = new Items();
-		        $item->name = Input::get('name', ':name');
-		        $item->price = Input::get('price', ':price');
-		        $item->description = Input::get('description', ':description');
-		        $item->keywords = Input::get('keywords', ':keywords');
+		        $item->name = Input::get('name');
+		        $item->price = Input::get('price');
+		        $item->description = Input::get('description');
+		        $item->keywords = Input::get('keywords');
 		        $item->username = $_SESSION["IS_LOGGED_IN"];
-		        $item->img_url = Input::get('documents', ':documents');
+		        $item->img_url = $imageName ? $imageName : '';
 		        $item->featured = 0;
 		        $item->save();
 		   	}
