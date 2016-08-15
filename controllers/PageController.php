@@ -51,7 +51,12 @@ function pageController()
 			break;
 		case '/signup': 
 			$main_view = '../views/users/signup.php';
-			//create user function
+			if ($_POST){
+				createUser();
+				$request = '/login';
+				header("Location: $request");
+				exit();
+			} 
 			break;
 		case '/login': 
 			if ($_POST) {

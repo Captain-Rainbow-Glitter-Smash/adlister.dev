@@ -4,10 +4,10 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card hovercard">
                 <div class="cardheader">
-                    <img alt="" src="/css/img/uploads/<?= $user->bannerImgSrc ?>">
+                    <img alt="" src="img/uploads/<?= $user->bannerImgSrc ?>">
                 </div>
                 <div class="avatar">
-                    <img alt="" src="/css/img/uploads/<?= $user->profileImgSrc ?>">
+                    <img alt="" src="img/uploads/<?= $user->profileImgSrc ?>">
                 </div>
                 <div class="info">
                     <div class="title">
