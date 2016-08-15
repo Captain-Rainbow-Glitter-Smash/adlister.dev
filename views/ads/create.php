@@ -9,21 +9,21 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="well well-sm opacity" id="createAd">
+			<div>
 				<form id="FormEnvioCorreo" enctype="multipart/form-data" method="post">
 					<div class="row">
 						<div class="col-md-8">
 							<div class="form-group">
 								<label for="name" class="make_white">Name</label>
-								<input type="text" id="subject" name="name" class="form-control" required="required" autofocus>
+								<input type="text" id="subject" name="name" class="form-control" required autofocus>
 							</div>
 							<div class="form-group">
-								<label for="price" class="make_white">Price</label>
-								<input type="text" id="subject" name="price" class="form-control" required="required" autofocus>
+								<label for="price" class="make_white">Price, whole numbers only</label>
+								<input type="text" id="subject" name="price" class="form-control" required autofocus placeholder="Ex: 150">
 							</div>
 							<div class="form-group">
 								<label for="keywords" class="make_white">Keywords, seperated by a ( , )</label>
-								<input type="text" id="keywords" name="keywords" class="form-control" required="required" autofocus>
+								<input type="text" id="keywords" name="keywords" class="form-control" required autofocus>
 							</div>
 							<div class="form-group">
 								<label for="name" class="make_white">Attach</label>
