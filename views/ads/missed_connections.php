@@ -37,7 +37,7 @@
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
-                <div class="well opacity">
+                <div>
                     <h4>Leave a Comment:</h4>
                     <form role="form">
                         <div class="form-group">
