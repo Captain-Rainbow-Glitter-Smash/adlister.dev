@@ -24,7 +24,7 @@
                         <img class="crop" src=<?="/css/img/uploads/" . $item->img_url?>>
                         <div class="caption">
                             <h4 class="pull-right make_white"><?='$'.$item->price?></h4>
-                            <h4><a href="/item" class="make_white"><?=$item->name?></a>
+                            <h4><a href="/item?name=<?=$item->name?>" class="make_white"><?=$item->name?></a>
                             </h4>
                             <p class="make_white"><?=$item->description?></p>
                         </div>

@@ -67,48 +67,46 @@ function showProfile() {
 //Featured Item List
 
 function featuredItems() {
-	if ($featured = 1) {
-	$items = Items::Features($featured);		
-	}
+	$items = Items::Features(); 
 	return $items;
 }
 
 
-//input functions
+// //input functions
 
- $username = Input::has('email_user') ? Input::get('email_user') : null;
- $password = Input::has('password') ? Input::get('password') : null;
- $name = Input::has('name') ? Input::get('name') : null;
- $email = Input::has('email') ? Input::get('email') : null;
+//  $username = Input::has('email_user') ? Input::get('email_user') : null;
+//  $password = Input::has('password') ? Input::get('password') : null;
+//  $name = Input::has('name') ? Input::get('name') : null;
+//  $email = Input::has('email') ? Input::get('email') : null;
 
- //first time page load
-if($username == null && $password == null && $name == null && $email == null){
-	return null;
-}
+//  //first time page load
+// if($username == null && $password == null && $name == null && $email == null){
+// 	return null;
+// }
 
-if (Input::has('name')) {
-		$user = new User();
+// if (Input::has('name')) {
+// 		$user = new User();
 
-		$user->name = Input::get('name');
-		$user->email = Input::get('email');
-		$user->username = Input::get('username');
-		$user->password = Input::get('password');
+// 		$user->name = Input::get('name');
+// 		$user->email = Input::get('email');
+// 		$user->username = Input::get('username');
+// 		$user->password = Input::get('password');
 
-		$user->save();	
-}
+// 		$user->save();	
+// }
 
 
 
-//if shit goes south, make this a function def
-if(Auth::check()){
-	$request = '/login-successful';
+// //if shit goes south, make this a function def
+// if(Auth::check()){
+// 	$request = '/login-successful';
 
-}
+// }
 
-if (Auth::attempt($username, $password)){
-	$request = '/login-successful';	
+// if (Auth::attempt($username, $password)){
+// 	$request = '/login-successful';	
 
-} else {
+// } else {
 
-	$request = '/login';
-} 
+// 	$request = '/login';
+// } 

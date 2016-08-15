@@ -34,9 +34,10 @@
                  </div>
              </div>
              <?php foreach ($items as $item): ?>
+                
              <a href="/item"><div class="row">
                  <div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
+                        <div class="thumbnail opacity">
                          <img src=<?="/css/img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
                          <div class="caption">
                              <h4 class="pull-right make_white"><?=$item->price?></h4>
@@ -47,28 +48,6 @@
                      </div>
                  </div></a>
              <?php endforeach ?>
-                 <!-- <a href="/item"><div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
-                         <img src="css/img/hammer.png" alt="Hammer">
-                         <div class="caption">
-                             <h4 class="pull-right make_white">$64.99</h4>
-                             <h4><a href="/item" class="make_white">Thor's Hammer</a>
-                             </h4>
-                             <p class="make_white">Makes Thunder</p>
-                         </div>
-                     </div>
-                 </div></a>
-                 <a href="/item"><div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
-                         <img src="css/img/lokis_helmet.png" alt="loki's helmet">
-                         <div class="caption">
-                             <h4 class="pull-right make_white">$74.99</h4>
-                             <h4><a href="/item" class="make_white">Loki's Helmet
-                             </h4>
-                             <p class="make_white">it goes on your head.</p>
-                         </div>
-                     </div>
-                 </div></a> -->
              </div>
          </div>
     </div>
