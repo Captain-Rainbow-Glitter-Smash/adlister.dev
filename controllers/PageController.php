@@ -1,9 +1,10 @@
 <?php
 require_once __DIR__ . '/../utils/helper_functions.php';
 
-
+var_dump($_SESSION);
 function pageController()
 {
+
 	// defines array to be returned and extracted for view
 	$data = [];
 	// finds position for ? in url so we can look at the url minus the get variables
@@ -28,7 +29,20 @@ function pageController()
 		case '/create_ad': 
 			if ($_POST) {
 				$imageName = saveUploadedImage("documents");
+<<<<<<< HEAD
 			}
+=======
+		        $item = new Items();
+		        $item->name = Input::get('name', ':name');
+		        $item->price = Input::get('price', ':price');
+		        $item->description = Input::get('description', ':description');
+		        $item->keywords = Input::get('keywords', ':keywords');
+		        $item->username = $_SESSION["IS_LOGGED_IN"];
+		        $item->img_url = Input::get('documents', ':documents');
+		        $item->featured = 0;
+		        $item->save();
+		   	}
+>>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e
 			$main_view = '../views/ads/create.php';
 			break;
 		case '/signup': 
@@ -61,5 +75,9 @@ function pageController()
 	$data['main_view'] = $main_view;
 	return $data;
 }
+<<<<<<< HEAD
 extract(pageController());
 var_dump($_POST);
+=======
+extract(pageController());
+>>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e

@@ -76,6 +76,7 @@ class Items extends Model {
             }
             return $instances;
         }
+<<<<<<< HEAD
     public static function singleItem($name)
         {
 
@@ -109,4 +110,8 @@ class Items extends Model {
             return $instance;
     }
 }
+=======
+    }
+
+>>>>>>> 907f542965f2749d8f9ac59bfbb96f0964a9f40e
 ?>

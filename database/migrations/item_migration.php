@@ -11,7 +11,7 @@ $query = 'CREATE TABLE items (
     price INT(10) NOT NULL,
     description VARCHAR(200) NOT NULL,
     keywords VARCHAR(20) NOT NULL,
-    date_added DATE NOT NULL,
+    date_added DATE NOT NULL DEFAULT CURRENT_DATE,
     username VARCHAR(50) NOT NULL, 
     img_url VARCHAR(100) NOT NULL,
     featured TINYINT(1) NOT NULL,
