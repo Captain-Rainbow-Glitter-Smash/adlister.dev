@@ -29,24 +29,28 @@ class Items extends Model {
 
     public static function findByKeyword($keyword) {
         self::dbConnect();
+        $filter = $_POST['search_type'];
+        if ($filter == 'weapons' XOR 'armor') {
+            $query = 'SELECT * FROM ' .self::$table . ' WHERE keywords = :keywords';
+            $stmt = self::$dbc->prepare($query);
+            $stmt->bindValue(':keywords', $keyword, PDO::PARAM_STR);
+            $stmt->execute();
 
-        // $filter = $_POST['search_type'];
-        $query = 'SELECT * FROM ' .self::$table . ' WHERE keywords = :keywords';
-        $stmt = self::$dbc->prepare($query);
-        $stmt->bindValue(':keywords', $keyword, PDO::PARAM_STR);
-        $stmt->execute();
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $instance = null;
 
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $instance = null;
+            $instances = [];
+            foreach ($results as $result) {
+                $instance = new static;
+                $instance->attributes = $results;
+                $instances[] = $instance;
 
-        $instances = [];
-        foreach ($results as $result) {
-            $instance = new static;
-            $instance->attributes = $results;
-            $instances[] = $instance;
-
+            }
+            return $instances;
+        } else {
+            echo "Error!";
         }
-        return $instances;
+
         
     }
 
