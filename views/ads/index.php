@@ -6,9 +6,9 @@
     <div class="row">
         <div class="col-md-3">
             <div class="list-group" id="filter_list">
-                <form name="form1" method="get" action="/Items.php">
+                <form name="form1" method="post" action="/Items.php">
                     <label for="search">Filter by:</label><br>
-                    <input type="radio" name="search_type" value="weapon"> Weapons<br>
+                    <input type="radio" name="search_type" value="weapons" checked> Weapons<br>
                     <input type="radio" name="search_type" value="armor"> Armor<br>
                     <input id="filter" type="submit" name="filter" value="Search">
                 </form> 
