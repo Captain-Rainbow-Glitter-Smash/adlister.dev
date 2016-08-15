@@ -29,6 +29,11 @@ function pageController()
 			$data["items"] = showInventory();
 			$main_view = '../views/ads/index.php';
 			break;
+		case '/search': 
+		var_dump(input::get("searchbtn"));
+			$data["items"] = items::searchItem(input::get("searchbtn"));
+			$main_view = '../views/ads/index.php';
+			break;
 		case '/create_ad': 
 			if ($_POST) {
 				$imageName = saveUploadedImage("documents");
@@ -78,4 +83,3 @@ function pageController()
 	return $data;
 }
 extract(pageController());
-

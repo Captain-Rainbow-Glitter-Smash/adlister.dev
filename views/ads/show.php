@@ -7,10 +7,16 @@
             <div class="list-group">
                 <a href="/inventory" class="list-group-item active">Return to Inventory</a>
             </div>
+            <div class="list-group">
+                <a href="/edit_ad" class="list-group-item active">Edit</a>
+            </div>
+            <div class="list-group">
+                <a href="/adit_ad" class="list-group-item active">Delete</a>
+            </div>
         </div>
         <div class="col-md-9">
-            <div class="thumbnail opacity">
-                <img class="img-responsive" src=<?="/css/img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
+            <div>
+                <img class="img-responsive" src=<?="/img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
                 <div class="caption-full">
                     <h4 class="pull-right"><?=$item->price?></h4>
                     <h4><a href="/item" class="make_white"><?=$item->name?></a>

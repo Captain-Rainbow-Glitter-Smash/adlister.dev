@@ -15,13 +15,13 @@
                          </ol>
                          <div class="carousel-inner">
                              <div class="item active">
-                                 <a href="/item"><img class="slide-image" src="css/img/uploads/shield.png" alt="shield"></a>
+                                 <a href="/inventory"><img class="slide-image" src="img/uploads/shield.png" alt="shield"></a>
                              </div>
                              <div class="item">
-                                 <a href="/item"><img class="slide-image" src="css/img/uploads/hammer.png" alt="Hammer"></a>
+                                 <a href="/inventory"><img class="slide-image" src="img/uploads/hammer.png" alt="Hammer"></a>
                              </div>
                              <div class="item">
-                                 <a href="/item"><img class="slide-image" src="css/img/uploads/lokis_helmet.png" alt="loki's helmet"></a>
+                                 <a href="/inventory"><img class="slide-image" src="img/uploads/lokis_helmet.png" alt="loki's helmet"></a>
                              </div>
                          </div>
                          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -37,10 +37,10 @@
              <a href="/item"><div class="row">
                  <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail opacity">
-                         <img src=<?="/css/img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
+                         <img src=<?="img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
                          <div class="caption">
                              <h4 class="pull-right make_white"><?=$item->price?></h4>
-                             <h4><a href="/item" . <?=$item->name?> class="make_white"><?=$item->name?></a>
+                             <h4><a href="/item?name=<?=$item->name?>" . <?=$item->name?> class="make_white"><?=$item->name?></a>
                              </h4>
                              <p class="make_white"><?=$item->description?></p>
                          </div>

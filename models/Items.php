@@ -100,14 +100,19 @@ class Items extends Model {
             $query = 'SELECT * FROM ' . self::$table . ' WHERE name LIKE :name OR keywords LIKE :keyword;';
 
             $stmt = self::$dbc->prepare($query);
-            $stmt->bindValue(':name', $name_or_keyword, PDO::PARAM_STR);
-            $stmt->bindValue(':email', $name_or_keyword, PDO::PARAM_STR);           
+            $stmt->bindValue(':name', "%$name_or_keyword%", PDO::PARAM_STR);
+            $stmt->bindValue(':keyword', "%$name_or_keyword%", PDO::PARAM_STR);           
             $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            $instance = new static;
-            $instance->attributes = $result;
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            return $instance;
+            $instances = [];
+            foreach ($results as $result) {
+                $instance = new static;
+                $instance->attributes = $result;
+                $instances[] = $instance;
+
+            }
+            return $instances;
     }
 }
 

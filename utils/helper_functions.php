@@ -8,7 +8,7 @@ require_once '../models/Items.php';
 // takes image from form submission and moves it into the uploads directory
 function saveUploadedImage($input_name)
 {
-	$target_dir = "css/img/uploads/";
+	$target_dir = "img/uploads/";
 	$filename = basename($_FILES[$input_name]["name"]);
 	$target_file = $target_dir . $filename;
 	$uploadOk = 1;
