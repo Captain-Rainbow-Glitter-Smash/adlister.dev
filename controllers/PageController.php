@@ -17,7 +17,10 @@ function pageController()
 	// switch that will run functions and setup variables dependent on what route was accessed
 	switch ($request) {
 
-		case '/': 
+		case '/':
+			if ($featured = 1) {
+			$data["items"] = showInventory();
+			} 
 			$main_view = '../views/home.php';
 			break;
 
@@ -60,14 +63,8 @@ function pageController()
 		default:    // displays 404 if route not specified above
 			$main_view = '../views/404.php';
 			break;
-
 	}
-
-	
-
 	$data['main_view'] = $main_view;
-
 	return $data;
 }
-
 extract(pageController());
