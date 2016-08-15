@@ -18,7 +18,7 @@
 				<li><a href="/create_ad">Create Ad</a></li>
 				<li><a href="/signup">Sign Up</a></li>
 				<li><a href="/login">Login</a></li>
-				<li><a href="/pleaseloveme!">Missed Connections</a></li>
+				<li><a href="/noticemesenpai">Missed Connections</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
@@ -27,7 +27,6 @@
 						<li><a href="/account">Profile</a></li>
 						<li><a href="/create_ad">Create Ad</a></li>
 						<li><a href="/edit_ad">Edit Ad</a></li>
-						<li><a href="/pleaseloveme!">Missed Connections</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="/logout">Logout</a></li>
 					</ul>
@@ -37,7 +36,7 @@
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
 				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="submit" class="btn btn-default">Search</button>
 			</form>
 		</div>
 	</div>

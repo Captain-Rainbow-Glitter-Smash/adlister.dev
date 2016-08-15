@@ -7,20 +7,14 @@ function pageController()
 
 	// defines array to be returned and extracted for view
 	$data = [];
-
 	// finds position for ? in url so we can look at the url minus the get variables
 	$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 	//if shit goes south, visit helper_functions.php
-
-
-
 	// switch that will run functions and setup variables dependent on what route was accessed
 	switch ($request) {
 
 		case '/':
-			if ($featured = 1) {
-			$data["items"] = showInventory();
-			} 
+			$data["items"] = featuredItems();
 			$main_view = '../views/home.php';
 			break;
 
@@ -54,14 +48,17 @@ function pageController()
 		case '/login': 
 			$main_view = '../views/users/login.php';
 			break;
-		case '/item': 
+		case '/item':
+			$name = input::get('name');
+			$item = items::singleItem($name);
+			$data ['item'] = $item;
 			$main_view = '../views/ads/show.php';
 			break;
 		case '/logout': 
 			Auth::logout();
 			$main_view = '../views/users/login.php';
 			break;
-		case '/pleaseloveme!': 
+		case '/noticemesenpai': 
 			$main_view = '../views/ads/missed_connections.php';
 			break;
 		case '/edit_ad': 
@@ -75,3 +72,4 @@ function pageController()
 	return $data;
 }
 extract(pageController());
+
