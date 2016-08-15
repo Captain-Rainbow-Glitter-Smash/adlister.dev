@@ -60,12 +60,6 @@ function showInventory() {
 }
 
 
-function showProfile() {
-	$user = User::all();
-	return $user;
-}
-
-
 //Featured Item List
 
 function featuredItems() {
@@ -86,33 +80,43 @@ function featuredItems() {
 // 	return null;
 // }
 
-// if (Input::has('name')) {
-// 		$user = new User();
-
-// 		$user->name = Input::get('name');
-// 		$user->email = Input::get('email');
-// 		$user->username = Input::get('username');
-// 		$user->password = Input::get('password');
-
-// 		$user->save();	
-// }
 
 
 
-// //if shit goes south, make this a function def
-// if(Auth::check()){
-// 	$request = '/login-successful';
-// //if shit goes south, make this a function def
-// if(Auth::check()){
-// 	$request = '/login-successful';
 
 
-// }
+function createUser (){
+	if (Input::has('name')) {
+			$user = new User();
 
-// if (Auth::attempt($username, $password)){
-// 	$request = '/login-successful';	
 
-// } else {
+			$user->name = Input::get('name');
+			$user->email = Input::get('email');
+			$user->username = Input::get('username');
+			$user->password = Input::get('password');
+			$user->profileImgSrc = '../img/default-profile.png';
+			$user->bannerImgSrc = '../img/default-profile.png';
+			$user->save();	
+	}
+}
 
-// 	$request = '/login';
-// } 
+
+function loginController(){
+	if(Auth::check()){
+		$request = '/account';
+		header("Location: $request");
+		exit();
+	}
+
+	$username = Input::has('email_user') ? Input::get('email_user') : null;
+ 	$password = Input::has('password') ? Input::get('password') : null;
+
+	if (Auth::attempt($username, $password)){
+		$request = '/account';	
+		header("Location: $request");
+		exit();
+	} 
+}
+
+
+
