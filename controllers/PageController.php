@@ -59,6 +59,7 @@ function pageController()
 			} 
 			break;
 		case '/login': 
+			Auth::logout();
 			if ($_POST) {
 				loginController();
 			}
