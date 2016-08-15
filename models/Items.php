@@ -76,5 +76,6 @@ class Items extends Model {
             }
             return $instances;
         }
-}
+    }
+
 ?>

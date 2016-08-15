@@ -15,6 +15,9 @@ html {
 button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 	margin-top: 10px;
 }
+div#createAs.well.well-sm.opacity {
+    height: 550px;
+}
 /*/Create Ad/*/
 .slide-image {
 	height: 30%;
@@ -321,7 +324,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 100%;
+    height: 350px;
 	width: 100%;
 	overflow: scroll;
 }
@@ -335,12 +338,12 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     margin:0 auto;
     text-align: center;
 	height: 300px;
-<<<<<<< HEAD
+
 }
 #mcPage {
 	margin-left: 25%;
 }
-=======
+
 /*	width: 40px;
 */}
 #filter_list {
@@ -359,4 +362,8 @@ img.crop {
 	height: 200px;
 	overflow: hidden;
 }
->>>>>>> 7e9ae3465fe488a2cbea2a138bcf076845bb738d
+#carousel-example-generic {
+	margin-bottom: 25px;
+	margin-top: 10px;
+	padding: 10px;
+}
