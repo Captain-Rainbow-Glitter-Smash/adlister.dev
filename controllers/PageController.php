@@ -1,25 +1,19 @@
 <?php
 require_once __DIR__ . '/../utils/helper_functions.php';
 
-
 function pageController()
 {
+
 	// defines array to be returned and extracted for view
 	$data = [];
-
 	// finds position for ? in url so we can look at the url minus the get variables
 	$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 	//if shit goes south, visit helper_functions.php
-
-
-
 	// switch that will run functions and setup variables dependent on what route was accessed
 	switch ($request) {
 
 		case '/':
-			if ($featured = 1) {
-			$data["items"] = showInventory();
-			} 
+			$data["items"] = featuredItems();
 			$main_view = '../views/home.php';
 			break;
 		case '/account':
@@ -37,8 +31,17 @@ function pageController()
 			break;
 		case '/create_ad': 
 			if ($_POST) {
-				$imageName = saveUploadedImage("documents"); 
-			}
+				$imageName = saveUploadedImage("documents");
+		        $item = new Items();
+		        $item->name = Input::get('name');
+		        $item->price = Input::get('price');
+		        $item->description = Input::get('description');
+		        $item->keywords = Input::get('keywords');
+		        $item->username = $_SESSION["IS_LOGGED_IN"];
+		        $item->img_url = $imageName ? $imageName : '';
+		        $item->featured = 0;
+		        $item->save();
+		   	}
 			$main_view = '../views/ads/create.php';
 			break;
 		case '/signup': 
@@ -51,14 +54,17 @@ function pageController()
 			}
 			$main_view = '../views/users/login.php';
 			break;
-		case '/item': 
+		case '/item':
+			$name = input::get('name');
+			$item = items::singleItem($name);
+			$data ['item'] = $item;
 			$main_view = '../views/ads/show.php';
 			break;
 		case '/logout': 
 			Auth::logout();
 			$main_view = '../views/users/login.php';
 			break;
-		case '/pleaseloveme!': 
+		case '/noticemesenpai': 
 			$main_view = '../views/ads/missed_connections.php';
 			break;
 		case '/edit_ad': 
@@ -72,3 +78,4 @@ function pageController()
 	return $data;
 }
 extract(pageController());
+
