@@ -310,7 +310,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
 }
 
 #ad_box {
-    margin-left:10%;
+    margin-left:25%;
     color: grey;
     height: 100%;
 }
@@ -336,5 +336,7 @@ button#button1id.btn.btn-success, button#button2id.btn.btn-danger {
     margin:0 auto;
     text-align: center;
 	height: 300px;
-/*	width: 40px;
-*/}
+}
+#mcPage {
+	margin-left: 25%;
+}

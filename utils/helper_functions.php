@@ -57,6 +57,14 @@ function showInventory() {
 	return $items;
 }
 
+//Featured Item List
+
+function featuredItems() {
+	if ($featured = 1) {
+	$items = Items::Features($featured);		
+	}
+	return $items;
+}
 
 //input functions
 

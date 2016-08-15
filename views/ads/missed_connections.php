@@ -1,6 +1,6 @@
 <div class="container">
 
-        <div class="row">
+        <div class="row" id="mcPage">
 
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
