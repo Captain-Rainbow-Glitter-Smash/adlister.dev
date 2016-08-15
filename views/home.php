@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
          <h1 id="crgs_title">Welcome to Captain Rainbow Glitter Smash!</h1>
-         <h4 id="subtitle">The number 4 marketplace for all your authentic-ish hero items.</h3>
+         <h4 id="subtitle">The number 4 marketplace for all your authentic-ish hero items.</h4>
      </div>
     <div class="row">
          <div class="col-md-9">
@@ -15,7 +15,7 @@
                          </ol>
                          <div class="carousel-inner">
                              <div class="item active">
-                                 <a href="/item"><img class="slide-image" src="css/img/uploads/shield.png" alt=<"shield"</a>
+                                 <a href="/item"><img class="slide-image" src="css/img/uploads/shield.png" alt="shield"></a>
                              </div>
                              <div class="item">
                                  <a href="/item"><img class="slide-image" src="css/img/uploads/hammer.png" alt="Hammer"></a>
@@ -33,43 +33,26 @@
                      </div>
                  </div>
              </div>
-             <?php foreach ($items as $item): ?>
-             <a href="/item"><div class="row">
-                 <div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
-                         <img src=<?="/css/img/uploads/" . $item->img_url?> alt=<?=$item->img_url?>>
-                         <div class="caption">
-                             <h4 class="pull-right make_white"><?=$item->price?></h4>
-                             <h4><a href="/item" . <?=$item->name?> class="make_white"><?=$item->name?></a>
-                             </h4>
-                             <p class="make_white"><?=$item->description?></p>
-                         </div>
-                     </div>
-                 </div></a>
-             <?php endforeach ?>
-                 <!-- <a href="/item"><div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
-                         <img src="css/img/hammer.png" alt="Hammer">
-                         <div class="caption">
-                             <h4 class="pull-right make_white">$64.99</h4>
-                             <h4><a href="/item" class="make_white">Thor's Hammer</a>
-                             </h4>
-                             <p class="make_white">Makes Thunder</p>
-                         </div>
-                     </div>
-                 </div></a>
-                 <a href="/item"><div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="thumbnail opacity">
-                         <img src="css/img/lokis_helmet.png" alt="loki's helmet">
-                         <div class="caption">
-                             <h4 class="pull-right make_white">$74.99</h4>
-                             <h4><a href="/item" class="make_white">Loki's Helmet
-                             </h4>
-                             <p class="make_white">it goes on your head.</p>
-                         </div>
-                     </div>
-                 </div></a> -->
-             </div>
-         </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <?php foreach ($items as $item): ?> 
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail opacity">
+                        <img class="crop" src=<?="/css/img/uploads/" . $item->img_url?>>
+                        <div class="caption">
+                            <h4 class="pull-right make_white"><?='$'.$item->price?></h4>
+                            <h4><a href="/item" class="make_white"><?=$item->name?></a>
+                            </h4>
+                            <p class="make_white"><?=$item->description?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach ?>
+            </div>
+        </div>
     </div>
 </div>
+

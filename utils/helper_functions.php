@@ -86,16 +86,16 @@ if($username == null && $password == null && $name == null && $email == null){
 	return null;
 }
 
-if (Input::has('name')) {
-		$user = new User();
+// if (Input::has('name')) {
+// 		$user = new User();
 
-		$user->name = Input::get('name');
-		$user->email = Input::get('email');
-		$user->username = Input::get('username');
-		$user->password = Input::get('password');
+// 		$user->name = Input::get('name');
+// 		$user->email = Input::get('email');
+// 		$user->username = Input::get('username');
+// 		$user->password = Input::get('password');
 
-		$user->save();	
-}
+// 		$user->save();	
+// }
 
 
 

@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="well well-sm opacity">
+			<div class="well well-sm opacity" id="createAd">
 				<form id="FormEnvioCorreo" enctype="multipart/form-data" method="post">
 					<div class="row">
 						<div class="col-md-8">
