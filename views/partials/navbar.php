@@ -24,7 +24,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="/login-successful">Profile</a></li>
+						<li><a href="/account">Profile</a></li>
 						<li><a href="/create_ad">Create Ad</a></li>
 						<li><a href="/edit_ad">Edit Ad</a></li>
 						<li><a href="/pleaseloveme!">Missed Connections</a></li>

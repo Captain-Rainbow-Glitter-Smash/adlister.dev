@@ -57,6 +57,13 @@ function showInventory() {
 	return $items;
 }
 
+
+function showProfile() {
+	$user = User::all();
+	return $user;
+}
+
+
 //Featured Item List
 
 function featuredItems() {
@@ -65,6 +72,7 @@ function featuredItems() {
 	}
 	return $items;
 }
+
 
 //input functions
 
@@ -87,7 +95,7 @@ if (Input::has('name')) {
 		$user->password = Input::get('password');
 
 		$user->save();	
-	}
+}
 
 
 
