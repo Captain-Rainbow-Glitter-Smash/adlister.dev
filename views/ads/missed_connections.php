@@ -23,7 +23,7 @@
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" id="dreamy" src="css/img/tony_stark.png" alt="ironman">
+                <img class="img-responsive" id="dreamy" src="../img/tony_stark.png" alt="ironman">
 
                 <hr>
 
@@ -52,8 +52,8 @@
                 <!-- Posted Comments -->
                 <!-- Comment -->
                 <div class="media">
-                    <a class="pull-left" href="css/img/tony.jpg">
-                        <img class="media-object" src="css/img/tony.jpg" alt="">
+                    <a class="pull-left" href="../img/tony.jpg">
+                        <img class="media-object" src="../img/tony.jpg" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Tony Stark
@@ -63,7 +63,7 @@
                         <!-- Nested Comment -->
                         <div class="media">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="css/img/scott.png" alt="css/img/scott.png">
+                                <img class="media-object" src="../img/scott.png" alt="../img/scott.png">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Scott Summers
@@ -75,7 +75,7 @@
                         <!-- End Nested Comment -->
                                                 <div class="media">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="css/img/deadpool.jpg" alt="">
+                                <img class="media-object" src="../img/deadpool.jpg" alt="">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Deadpool
