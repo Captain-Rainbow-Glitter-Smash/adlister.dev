@@ -57,9 +57,20 @@ function showInventory() {
 	return $items;
 }
 
+
 function showProfile() {
 	$user = User::all();
 	return $user;
+}
+
+
+//Featured Item List
+
+function featuredItems() {
+	if ($featured = 1) {
+	$items = Items::Features($featured);		
+	}
+	return $items;
 }
 
 
